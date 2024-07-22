@@ -1,0 +1,178 @@
+/* 设置页面的基本样式 */
+    body {
+        font-family: Arial, sans-serif; /* 设置页面的默认字体 */
+        margin: 0; /* 移除页面的默认边距 */
+        padding: 0; /* 移除页面的默认填充 */
+    }
+
+    .navbar {
+        background-color: #f5fcd6; /* 设置导航栏背景颜色 */
+        padding: 10px; /* 设置导航栏的填充 */
+        position: relative; /* 设置导航栏的位置为相对定位 */
+        display: flex; /* 使用 flex 布局 */
+        justify-content: space-between; /* 在导航栏中分配间距 */
+        align-items: center; /* 垂直居中对齐 */
+    }
+
+    .navbar.title-navbar {
+        justify-content: center; /* 居中对齐 */
+    }
+
+    .navbar.dropdown-navbar {
+        justify-content: flex-end; /* 右对齐 */
+    }
+
+    /* 公司标题样式 */
+    .navbar-brand {
+        float: left; /* 将公司名称浮动到导航栏的左侧 */
+        font-size: 35px; /* 设置公司名称的字体大小 */
+        font-weight: bold; /* 设置公司名称的字体加粗 */
+    }
+
+    /* 菜单标题样式 */
+    .title {
+        font-size: 15px; /* 设置标题的字体大小 */
+        font-weight: bold; /* 设置标题的字体加粗 */
+        text-align: center; /* 确保文本居中 */
+    }
+
+    /* 导航栏链接和按钮的基本样式 */
+    .navbar a, .navbar .dropbtn {
+        display: block; /* 显示为块级元素 */
+        text-align: center; /* 文字居中对齐 */
+        padding: 14px 20px; /* 内边距 */
+        width: 100%; /* 设置导航栏宽度为100% */
+        top: 10px; /* 距离页面顶部10px */
+        right: 10px; /* 距离页面右侧10px */
+        box-sizing: border-box; /* 确保 padding 和 border 不会影响元素的总宽度 */
+    }
+
+    .icon {
+        font-size: 24px;
+        margin-right: 10px;
+        display: none; /* 默认隐藏 */
+    }
+
+    @media (max-width: 768px) {
+        .icon {
+            display: block; /* 屏幕宽度小于768px时显示 */
+            width: 100%; /* 菜单宽度等于页面宽度 */
+        }
+    }
+
+    /* 悬停时的样式变化 */
+    .navbar a:hover, .navbar .dropdown:hover .dropbtn {
+        background-color: #daf3ac; /* 背景颜色变为淡灰色 */
+        color: black; /* 字体颜色变为黑色 */
+    }
+
+    /* 下拉菜单容器样式 */
+    .navbar .dropdown {
+        top: 10px; /* 距离页面顶部10px */
+        right: 10px; /* 距离页面右侧10px */
+        overflow: hidden; /* 防止内容溢出 */
+    }
+
+    /* 下拉按钮样式 */
+    .navbar .dropdown .dropbtn {
+        font-size: 16px; /* 字体大小 */
+        border: none; /* 移除边框 */
+        outline: none; /* 移除轮廓 */
+        top: 10px; /* 距离页面顶部10px */
+        right: 10px; /* 距离页面右侧10px */
+        background-color: inherit; /* 背景颜色继承自父元素 */
+        margin: 0; /* 外边距为0 */
+        padding: 14px 20px; /* 内边距 */
+        cursor: pointer; /* 鼠标指针样式 */
+    }
+
+    /* 下拉按钮中的图标样式 */
+    .navbar .dropdown .dropbtn .icon {
+        font-size: 20px; /* 图标大小 */
+    }
+
+    /* 下拉菜单内容样式 */
+    .navbar .dropdown-content {
+        display: none; /* 默认隐藏 */
+        position: absolute; /* 绝对定位 */
+        background-color: #eff0b9; /* 背景颜色 */
+        flex-direction: column; /* 垂直排列菜单项 */
+        width: 100%; /* 菜单宽度为 100% */
+        text-align: center; /* 菜单项文本居中 */
+        z-index: 1; /* 层叠顺序 */
+    }
+
+    /* 下拉菜单项的样式 */
+    .navbar .dropdown-content a {
+        float: none; /* 取消浮动 */
+        color: black; /* 字体颜色 */
+        padding: 12px 16px; /* 内边距 */
+        text-decoration: none; /* 移除下划线 */
+        display: block; /* 显示为块级元素 */
+        text-align: left; /* 文字左对齐 */
+        border-bottom: 2px solid #080808; /* 添加底部边框 */
+    }
+
+    /* 悬停时显示下拉菜单内容 */
+    .navbar .dropdown:hover .dropdown-content {
+        display: block; /* 显示下拉菜单内容 */
+        width: 100vw; /* 占据整个视口宽度 */
+        left: 0; /* 靠左对齐 */
+        top: 50px; /* 调整位置以显示在按钮下方 */
+        border-bottom: 1px solid #ddd; /* 添加底部边框 */
+    }
+    .box {
+        background-color: #dcfcdc; /* 比浅蓝色稍微深点 */
+        padding: 10px;
+        border: 1px solid black;
+        box-sizing: border-box;
+    }
+    
+    .title-container {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 10px;
+    }
+    
+    .small-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100px; /* 调整宽度 */
+        height: 30px; /* 调整高度 */
+        background-color: #d8f6d4; /* 比box背景色再深点 */
+        border: 1px solid black;
+    }
+    
+    .small-box h2 {
+        margin: 0;
+        color: black; /* 字体颜色为黑色 */
+        font-size: 1.25em; /* 比虚拟文本大25% */
+    }
+    /* 主内容样式 */
+    .main-content {
+        padding: 20px; /* 内边距 */
+    }
+
+        /* 返回顶端按钮样式 */
+    #topBtn {
+        bottom: 20px; /* 距离底部 20px */
+        right: 30px; /* 距离右侧 30px */
+        font-size: 18px; /* 字体大小 */
+        border: none; /* 去除边框 */
+        outline: none; /* 去除外边框 */
+        color: white; /* 文字颜色 */
+        cursor: pointer; /* 鼠标指针变为手形 */
+        padding: 15px; /* 内边距 */
+        border-radius: 4px; /* 圆角边框 */
+    }
+
+    /* 返回顶端按钮悬停样式 */
+    #topBtn:hover {
+        background-color: #555; /* 背景颜色变化 */
+    }
+
+    /* 添加平滑滚动效果 */
+html {
+    scroll-behavior: smooth;
+}
